@@ -1,10 +1,11 @@
 <template>
   <div id="nav">
-    <router-link to="/">sports</router-link> |
-    <router-link to="/example2">medicine</router-link> |
-    <router-link to="/example3">home</router-link>
-  </div>
+    <p><router-link to="/">sports</router-link> |</p>
+    <p><router-link to="/example2">medicine</router-link> |</p>
+    <p><router-link to="/example3">home</router-link></p>
+  
   <router-view :key="$route.fullPath"/>
+  </div>
 </template>
 
 <style>
@@ -12,7 +13,7 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align:right;
   color: #2c3e50;
 }
 

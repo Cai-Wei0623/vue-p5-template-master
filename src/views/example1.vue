@@ -18,6 +18,7 @@ export default {
         let w = 500;
         let h = 400;
 
+                
         
         p5.setup = () => {
           p5.createCanvas(w, h);
@@ -25,7 +26,6 @@ export default {
             particles.push(new Particle());
           }
         }
-        };
 
         p5.draw = () => {
            p5.background('#0f0f0f');
