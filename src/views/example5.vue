@@ -18,24 +18,21 @@ export default {
         let w = 500;
         let h = 400;
 
-        
+        // let w = window.innerWidth;
+        // let h = window.innerHeight;
+
         p5.setup = () => {
-          p5.createCanvas(w, h);
-          for(let i = 0;i<width/10;i++){
-            particles.push(new Particle());
-          }
-        }
+            p5.createCanvas(w, h);
         };
 
         p5.draw = () => {
-           p5.background('#0f0f0f');
-           for(let i = 0;i<particles.length;i++) {
-             particles[i].createParticle();
-             particles[i].moveParticle();
-             particles[i].joinParticles(particles.slice(i));
-           }
-        }
+            // call your method:
+            p5.changeBG(p5.mouseX, p5.mouseY);
+            
+            // p5.background(33, 33, 33);
+            p5.ellipse(p5.mouseX, p5.mouseY, 100);
 
+        };
 
         // create methods:
         p5.changeBG = (x, y) => {
@@ -44,8 +41,14 @@ export default {
           p5.background(_x, _y, 33);
         }
     }
-
     this.p5Canvas = new P5(sketch, 'p5Canvas');
+  },
+  mounted(){
+      this.socket=io();
+      this.socket.on('MouseMove', function(msg){
+          this.socketX = msg.x;
+          this.socketY = msg.y;
+      });
   },
   unmounted () {
     this.p5Canvas = null;

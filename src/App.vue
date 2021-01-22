@@ -1,9 +1,8 @@
 <template>
-  <h1>P5.js on Vue3 Template</h1>
   <div id="nav">
-    <router-link to="/">Example 1</router-link> |
-    <router-link to="/example2">Example 2</router-link> |
-    <router-link to="/example3">Example 3</router-link>
+    <router-link to="/">sports</router-link> |
+    <router-link to="/example2">medicine</router-link> |
+    <router-link to="/example3">home</router-link>
   </div>
   <router-view :key="$route.fullPath"/>
 </template>
@@ -23,10 +22,10 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #ebeff3;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #ffffff;
 }
 </style>
