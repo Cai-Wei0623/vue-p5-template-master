@@ -1,69 +1,56 @@
 <template>
-  <div class="container">
-    <div id="p5Canvas"></div>
-  </div>
+  <img class="photo1" src="https://scontent-hkt1-1.xx.fbcdn.net/v/t31.0-8/11057514_882733668473469_2961132619358457340_o.jpg?_nc_cat=110&amp;ccb=2&amp;_nc_sid=9267fe&amp;_nc_ohc=fCKgs7pjkKEAX_xOFdy&amp;_nc_ht=scontent-hkt1-1.xx&amp;oh=2dcf992d4669aa6a3372bd22d00d5336&amp;oe=603393BD">
+  <div class="circle"></div>
+  <div class="word1">Purpose</div>
+  <div class="word2">光合玻璃藝術以玻璃藝術教育推廣為宗旨，工作室以教學、創作、委製，歡迎預約參觀及上課。</div>
 </template>
-
 <script>
-import P5 from 'p5';
-
-export default {
-  data() {
-    return {
-      p5Canvas: null,
-    }
-  },
-  created() {
-    const sketch = p5 => {
-        let w = 500;
-        let h = 400;
-
-        // let w = window.innerWidth;
-        // let h = window.innerHeight;
-
-        p5.setup = () => {
-            p5.createCanvas(w, h, p5.WEBGL);
-        };
-
-        p5.draw = () => {
-            p5.background(250);
-            p5.rotateY(p5.frameCount * 0.01);
-            
-            for (let j = 0; j < 5; j++) {
-              p5.push();
-              for (let i = 0; i < 80; i++) {
-                p5.translate(
-                  p5.sin(p5.frameCount * 0.001 + j) * 100,
-                  p5.sin(p5.frameCount * 0.001 + j) * 100,
-                  i * 0.1
-                );
-                p5.rotateZ(p5.frameCount * 0.002);
-                p5.push();
-                p5.sphere(8, 6, 4);
-                p5.pop();
-              }
-              p5.pop();
-            }
-
-        };
-    }
-
-    this.p5Canvas = new P5(sketch, 'p5Canvas');
-  },
-  unmounted () {
-    this.p5Canvas = null;
-  },
-}
 </script>
-
 <style>
-#p5Canvas {
-  width: 100vw;
-  position: relative;
-}
-
-main {
-  margin: 0 auto;
-  width: 90vw;
-}
+  .photo1 {
+    position: relative;
+    width: 100vw;
+    height: 1024px;
+    left: 0px;
+    top: 0px;
+    }
+  .circle {
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    left: 395px;
+    top: 210px;
+    border-radius: 100%;
+    background: #FFFFFF;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .word1 {
+    position: absolute;
+    width: 254px;
+    height: 72px;
+    left: 593px;
+    top: 307px;
+    font-family: Romanesco;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 65px;
+    line-height: 83px;
+    text-align: center;
+    color: #000000;
+  }
+  .word2 {
+    position: absolute;
+    width: 436px;
+    height: 304px;
+    left: 502px;
+    top: 429px;
+    font-family: Romanesco;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    color: #000000;
+  }
 </style>
