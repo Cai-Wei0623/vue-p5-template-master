@@ -4,8 +4,10 @@
   <div class="word1">Purpose</div>
   <div class="word2">光合玻璃藝術以玻璃藝術教育推廣為宗旨，工作室以教學、創作、委製，歡迎預約參觀及上課。</div>
 </template>
+
 <script>
 </script>
+
 <style>
   .photo1 {
     position: relative;
@@ -30,8 +32,8 @@
     height: 72px;
     left: 593px;
     top: 307px;
-    font-family: Romanesco;
-    font-style: normal;
+    font-family:Roboto;
+    font-style: italic;
     font-weight: normal;
     font-size: 65px;
     line-height: 83px;
@@ -44,7 +46,7 @@
     height: 304px;
     left: 502px;
     top: 429px;
-    font-family: Romanesco;
+    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
