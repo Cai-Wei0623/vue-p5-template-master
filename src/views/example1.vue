@@ -1,7 +1,9 @@
 <template>
+<div>
   <p class=" VETRI">VETRI</p>
   <p class="GLASSART">GLASSART</p>
   <p class="Address">Address:新北市八里區仁愛路120號 / Tel:(02)2610-7576</p>
+</div>
 </template>
 <style>
 .VETRI {

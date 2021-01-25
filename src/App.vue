@@ -4,7 +4,7 @@
     <router-link to="/example2">Purpose</router-link> |
     <router-link to="/example3">Concept</router-link> |
     <router-link to="/example4">Classes</router-link> |
-    <router-link to="/example5">Products</router-link>
+    <router-link to="/example5">Date</router-link>
 
   
   <router-view :key="$route.fullPath"/>

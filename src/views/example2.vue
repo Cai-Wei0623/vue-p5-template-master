@@ -1,8 +1,10 @@
 <template>
+<div>
   <img class="photo1" src="https://scontent-hkt1-1.xx.fbcdn.net/v/t31.0-8/11057514_882733668473469_2961132619358457340_o.jpg?_nc_cat=110&amp;ccb=2&amp;_nc_sid=9267fe&amp;_nc_ohc=fCKgs7pjkKEAX_xOFdy&amp;_nc_ht=scontent-hkt1-1.xx&amp;oh=2dcf992d4669aa6a3372bd22d00d5336&amp;oe=603393BD">
   <div class="circle"></div>
   <div class="word1">Purpose</div>
   <div class="word2">光合玻璃藝術以玻璃藝術教育推廣為宗旨，工作室以教學、創作、委製，歡迎預約參觀及上課。</div>
+</div>
 </template>
 
 <script>
